@@ -48,7 +48,7 @@ class Warehouse:
 	
 	# Returns the item in the warehouse with the highest price
 	def get_max_price(self):
-			
+		return max(Item.item[1])
 		
 
 
@@ -72,7 +72,7 @@ class TestAllMethods(unittest.TestCase):
 
 	## Check to see whether you can add an item to the warehouse
 	def test_add_item(self):
-		self.assertEqual(self.add_item(self.item1))
+		self.assertEqual(Warehouse.add_item(self.item1),"Beer")
 
 	## Check to see whether warehouse correctly returns the item with the most stock
 	def test_warehouse_max_stocks(self):
